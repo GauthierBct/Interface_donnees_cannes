@@ -1,0 +1,13 @@
+name: interface_donnees_cannes
+title:
+username:
+account: gauthierbct
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4161481
+bundleId: 4621929
+url: https://gauthierbct.shinyapps.io/interface_donnees_cannes/
+when: 1621547528.98929
+lastSyncTime: 1621547528.98929
+asMultiple: FALSE
+asStatic: FALSE
