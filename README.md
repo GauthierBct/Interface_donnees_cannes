@@ -8,7 +8,7 @@ Les librairies utilisées sont :
 * `shinydashboard` : pour la création du dashboard
 * `DT` : pour la manipulation de tableaux  
 
-Un petit script R `firsttime.R` est disponible pour télécharger toutes les libraires necéssaires.
+Un petit script R `firsttime.R` est disponible pour télécharger toutes les libraires necéssaires (contient les `install.packages()` adéquats).
 
 ## Configuration
 Dans un premier temps, chargez toutes les librairies :
