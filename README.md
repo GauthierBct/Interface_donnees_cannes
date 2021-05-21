@@ -68,7 +68,7 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 ```
 Vous avez la structure générale du programme, le programme complet est disponible dans ``app.R``.
-Dans mon cas, je télécharges les données lorsque qu'on appuie sur le bouton "Visualisation", du côté du **Server** nous allons faire :
+Dans mon cas, je télécharges les données lorsque qu'on appuie sur le bouton "Visualisation", du côté du **server** (``server <- function(input, output, session) {}``) nous allons faire :
 ```R
 observeEvent(input$actBtnVisualisation, {
     #On bloque le code ici tant que le textInput est vide. 
