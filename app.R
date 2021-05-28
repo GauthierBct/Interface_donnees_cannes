@@ -2,9 +2,7 @@ library(shiny)
 library(shinydashboard)
 library(Rthingsboard)
 library(DT)
-library(ggplot2)
-library(shinyWidgets)
-#library(rsconnect)
+library(rsconnect)
 
 url = "http://scada.g-eau.fr"
 publicId = "299cedc0-f3e9-11e8-9dbf-cbc1e37c11e3" 
