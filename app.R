@@ -4,7 +4,7 @@ library(Rthingsboard)
 library(DT)
 library(ggplot2)
 library(shinyWidgets)
-#library(rsconnect)
+library(rsconnect)
 
 url = "http://scada.g-eau.fr"
 publicId = "299cedc0-f3e9-11e8-9dbf-cbc1e37c11e3" 
@@ -34,7 +34,7 @@ InList <- function(x, key) {
 tb_api = ThingsboardApi(url = url, publicId = publicId)
 choices = list("je", "suis", "beau")
 ui <- dashboardPage(skin = "green",
-  dashboardHeader(title = tags$div(img(src="logo_hallehydraulique_mini.png", width ="100px") , " - Projet hubIS"), 
+  dashboardHeader(title = tags$div(img(src="logo_hallehydraulique_mini.png", width ="100px"), " - Projet hubIS"), #icon("database")
                   titleWidth = "300px",  
                   dropdownMenuOutput("notifs")),
   dashboardSidebar(
@@ -96,7 +96,8 @@ ui <- dashboardPage(skin = "green",
               ),
               plotOutput("Plot"),
               hr(),
-              downloadButton("downloadData", "Télécharger"),
+              uiOutput(outputId ="downloadData"),
+              hr(),
               dataTableOutput('dataTable')
       ),
       
@@ -234,8 +235,11 @@ server <- function(input, output, session) {
     output$notifs <- renderMenu({
       dropdownMenu(type = "notifications", icon = icon("bell"), .list=nots)
     })
+    output$downloadData <- renderUI({
+      downloadButton("downloadDataHand", "Télécharger",icon('download'))
+    })
   })
-  output$downloadData <- downloadHandler(
+  output$downloadDataHand <- downloadHandler(
     filename = function() {
       paste("data-", Sys.Date(), ".csv", sep="")
     },
