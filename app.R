@@ -34,7 +34,7 @@ InList <- function(x, key) {
 tb_api = ThingsboardApi(url = url, publicId = publicId)
 choices = list("je", "suis", "beau")
 ui <- dashboardPage(skin = "green",
-  dashboardHeader(title = tags$div(img(src="logo_hallehydraulique_mini.png", width ="100px"), " - Projet hubIS"), #icon("database")
+  dashboardHeader(title = tags$div(img(src="logo_hubis.png", width ="100px"), " - Projet hubIS"), #icon("database")
                   titleWidth = "300px",  
                   dropdownMenuOutput("notifs")),
   dashboardSidebar(
@@ -117,8 +117,9 @@ ui <- dashboardPage(skin = "green",
                                                   "ici" )),
             hr(),
             fluidRow(
-              column(6, HTML("<center><img src=logo_hallehydraulique_mini.png width=200px></center>")),
-              column(6, HTML("<center><img src=logo-polytech.png width=150px></center>"))
+              column(4, HTML("<center><img src=logo-supagro.png width=400px></center>")),
+              column(4, HTML("<center><img src=logo_hubis.png width=250px></center>")),
+              column(4, HTML("<center><img src=logo-polytech.png width=125px></center>"))
         )
       )
     )
