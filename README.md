@@ -6,7 +6,7 @@ Les librairies utilisées sont :
 * `Rthingsboard` : pour récupérer les données de Thingsboard
 * `shiny` : pour l'interface
 * `shinydashboard` : pour la création du dashboard
-* `DT` : pour la manipulation de tableaux  
+* `DT` : pour l'affichage de tableaux  
 
 Un petit script R `firsttime.R` est disponible pour télécharger toutes les libraires necéssaires (contient les `install.packages()` adéquats).
 
